@@ -19,3 +19,10 @@ let answer1 = document.querySelector('#answer-1');
 let answer2 = document.querySelector('#answer-2');
 let answer3 = document.querySelector('#answer-3');
 let answer4 = document.querySelector('#answer-4');
+
+//Click start quiz button
+startBtn.addEventListener('click',() => {
+    
+    homeScreen.style.display = 'none';
+    gameScreen.style.display = 'block';
+})
