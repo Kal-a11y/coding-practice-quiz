@@ -1,0 +1,39 @@
+/* Main element/ Homepage */
+main{
+    margin:0 auto;
+    text-align: center;
+    margin-top: 50px;
+    width: 60%;
+}
+
+button{
+    width: 100px;
+    height: 50px;
+    margin: 10px;
+    background-color: purple;
+    color: white;
+    border: transparent;
+    border-radius: 10px;
+    cursor: pointer;
+}
+button:hover{
+    background-color: violet;
+}
+
+
+/* Section game */
+
+/* Section highscores */
+
+/* Footer */
+footer{
+    position: absolute;
+    text-align: center;
+    margin: 0px;
+    width:100dvw;
+    bottom: 0;
+    right:0;
+
+    background-color: purple;
+    color:white;
+}
