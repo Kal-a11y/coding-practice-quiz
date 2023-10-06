@@ -24,6 +24,7 @@ button:hover{
 /* Section game */
 #game-view{
     text-align: center;
+    display: none;
 }
 #question-box{
     height: 75px;
