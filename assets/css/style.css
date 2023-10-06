@@ -24,6 +24,15 @@ button:hover{
 /* Section game */
 #game-view{
     text-align: center;
+}
+#question-box{
+    height: 75px;
+}
+#time-box{
+    position: absolute;
+    top:0px;
+    right: 50px;
+    width: 100px;
 
 }
 #answers-box{
