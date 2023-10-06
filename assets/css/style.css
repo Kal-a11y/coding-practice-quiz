@@ -22,6 +22,28 @@ button:hover{
 
 
 /* Section game */
+#game-view{
+    text-align: center;
+
+}
+#answers-box{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: space-between;
+    text-align: center;
+    height: 300px;
+}
+.answer{
+    width: 45%;
+    border: 2px solid black;
+    height: 100px;
+    background-color: darkorange;
+    cursor: ponter;
+}
+.answer:hover{
+    background-color: orange;
+}
 
 /* Section highscores */
 
