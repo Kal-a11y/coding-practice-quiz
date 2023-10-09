@@ -21,6 +21,10 @@ let answer2 = document.querySelector('#answer-2');
 let answer3 = document.querySelector('#answer-3');
 let answer4 = document.querySelector('#answer-4');
 
+//global variables
+let secondsLeft = 60;
+let quizInProgress = true;
+
 //Click start quiz button
 startBtn.addEventListener('click',() => {
     
