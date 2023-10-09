@@ -13,6 +13,7 @@ let scoreBtn = document.querySelector('#score-btn');
 //Question
 let questionNum = document.querySelector('#question-num')
 let questionText = document.querySelector('#question-text');
+let timer = document.querySelector('#timer');
 
 //Answers
 let answer1 = document.querySelector('#answer-1');
