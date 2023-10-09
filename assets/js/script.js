@@ -30,4 +30,7 @@ startBtn.addEventListener('click',() => {
     
     homeScreen.style.display = 'none';
     gameScreen.style.display = 'block';
+
+    timer.textContent = secondsLeft;
+    startTimer()
 })
