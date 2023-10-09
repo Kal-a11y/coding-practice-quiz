@@ -34,3 +34,16 @@ startBtn.addEventListener('click',() => {
     timer.textContent = secondsLeft;
     startTimer()
 })
+
+function startTimer() {
+    let timerInterval = setInterval(() =>{
+        secondsLeft--;
+        timer.textContent = secondsLeft;
+
+        if (secondsLeft === 0 && quizInProgress){
+            clearInterval(timerInterval);
+            quizFailed();
+        }
+    },1000)
+}
+
