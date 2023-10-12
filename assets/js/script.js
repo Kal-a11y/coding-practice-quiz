@@ -32,7 +32,8 @@ startBtn.addEventListener('click',() => {
     gameScreen.style.display = 'block';
 
     timer.textContent = secondsLeft;
-    startTimer()
+    startTimer();
+    quiz();
 })
 
 function startTimer() {
