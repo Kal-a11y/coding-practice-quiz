@@ -4,6 +4,7 @@ main{
     text-align: center;
     margin-top: 50px;
     width: 60%;
+    display: block;
 }
 
 button{
