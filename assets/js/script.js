@@ -48,3 +48,15 @@ function startTimer() {
     },1000)
 }
 
+function quiz(){
+    //Show question information
+    questionNum.textContent = currentQuestion;
+    questionText.textContent= testQuestions.q1.question;
+
+    //Show answer information
+    answer1.textContent = testQuestions.q1.correct;
+    answer2.textContent = testQuestions.q1.incorrect1;
+    answer3.textContent = testQuestions.q1.incorrect2;
+    answer4.textContent = testQuestions.q1.incorrect3;
+    
+}
