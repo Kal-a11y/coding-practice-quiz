@@ -24,6 +24,7 @@ let answer4 = document.querySelector('#answer-4');
 //global variables
 let secondsLeft = 60;
 let quizInProgress = true;
+let currentQuestionNum = 1;
 
 //Click start quiz button
 startBtn.addEventListener('click',() => {
