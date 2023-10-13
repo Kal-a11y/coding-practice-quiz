@@ -51,7 +51,33 @@ function startTimer() {
 }
 
 function quiz(){
+    //Initial question shown
     showQuestion.q1();
+
+    //For each answer conainer...
+        for (let i = 0;i < answerContainter.length; i++){
+            //When clicked change the question
+            answerContainter[i].addEventListener('click', () =>{
+                
+                currentQuestionNum++;
+                if (currentQuestionNum == 1){
+                    showQuestion.q1();
+                } else if (currentQuestionNum == 2){
+                    showQuestion.q2();
+                } else if (currentQuestionNum == 3){
+                    showQuestion.q3();
+                } else if (currentQuestionNum == 4){
+                    showQuestion.q4();
+                } else if (currentQuestionNum == 5){
+                    showQuestion.q5();
+                } else {
+                    quizPassed();
+                }
+            })
+            
+        
+    }
+    
 
 }
 
@@ -112,8 +138,6 @@ let showQuestion = {
         answer4.textContent = testQuestions.q5.incorrect3;
     },
 }
-//When any answer is clicked move to the next question
-    //create an onclick for .answer to change current question num
 
 //When the wrong answer is clicked remove time from timer
 
