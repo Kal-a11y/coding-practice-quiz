@@ -20,6 +20,7 @@ let answer1 = document.querySelector('#answer-1');
 let answer2 = document.querySelector('#answer-2');
 let answer3 = document.querySelector('#answer-3');
 let answer4 = document.querySelector('#answer-4');
+let answerContainter = document.querySelectorAll('.answer'); //all answers
 
 //global variables
 let secondsLeft = 60;
@@ -64,7 +65,6 @@ function quiz(){
 
 //When any answer is clicked move to the next question
     //store question changes in an object with methods
-    //Get answer elements with jquery
     //create an onclick for .answer to change current question num
 
 //When the wrong answer is clicked remove time from timer
