@@ -51,7 +51,7 @@ function startTimer() {
 
 function quiz(){
     //Show question information
-    questionNum.textContent = currentQuestion;
+    questionNum.textContent = currentQuestionNum;
     questionText.textContent= testQuestions.q1.question;
 
     //Show answer information
@@ -61,3 +61,19 @@ function quiz(){
     answer4.textContent = testQuestions.q1.incorrect3;
     
 }
+
+//When any answer is clicked move to the next question
+    //store question changes in an object with methods
+    //Get answer elements with jquery
+    //create an onclick for .answer to change current question num
+
+//When the wrong answer is clicked remove time from timer
+
+//delete code below when done
+
+homeScreen.style.display = 'none';
+gameScreen.style.display = 'block';
+
+timer.textContent = secondsLeft;
+startTimer();
+quiz();
