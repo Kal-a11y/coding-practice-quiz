@@ -51,20 +51,68 @@ function startTimer() {
 }
 
 function quiz(){
-    //Show question information
-    questionNum.textContent = currentQuestionNum;
-    questionText.textContent= testQuestions.q1.question;
+    showQuestion.q1();
 
-    //Show answer information
-    answer1.textContent = testQuestions.q1.correct;
-    answer2.textContent = testQuestions.q1.incorrect1;
-    answer3.textContent = testQuestions.q1.incorrect2;
-    answer4.textContent = testQuestions.q1.incorrect3;
-    
 }
 
+let showQuestion = {
+    q1: function(){
+        //Show question information
+        questionNum.textContent = 1;
+        questionText.textContent= testQuestions.q1.question;
+
+        //Show answer information
+        answer1.textContent = testQuestions.q1.correct;
+        answer2.textContent = testQuestions.q1.incorrect1;
+        answer3.textContent = testQuestions.q1.incorrect2;
+        answer4.textContent = testQuestions.q1.incorrect3;
+    },
+    q2: function(){
+        //Show question information
+        questionNum.textContent = 2;
+        questionText.textContent= testQuestions.q2.question;
+
+        //Show answer information
+        answer1.textContent = testQuestions.q2.incorrect2;
+        answer2.textContent = testQuestions.q2.incorrect1;
+        answer3.textContent = testQuestions.q2.correct;
+        answer4.textContent = testQuestions.q2.incorrect3;
+    },
+    q3: function(){
+        //Show question information
+        questionNum.textContent = 3;
+        questionText.textContent= testQuestions.q3.question;
+
+        //Show answer information
+        answer1.textContent = testQuestions.q3.incorrect3;
+        answer2.textContent = testQuestions.q3.incorrect1;
+        answer3.textContent = testQuestions.q3.incorrect2;
+        answer4.textContent = testQuestions.q3.correct;
+    },
+    q4: function(){
+        //Show question information
+        questionNum.textContent = 4;
+        questionText.textContent= testQuestions.q4.question;
+
+        //Show answer information
+        answer1.textContent = testQuestions.q4.correct;
+        answer2.textContent = testQuestions.q4.incorrect1;
+        answer3.textContent = testQuestions.q4.incorrect2;
+        answer4.textContent = testQuestions.q4.incorrect3;
+    },
+    q5: function(){
+        //Show question information
+        questionNum.textContent = 5;
+        questionText.textContent= testQuestions.q5.question;
+
+        //Show answer information
+        answer1.textContent = testQuestions.q5.incorrect1;
+        answer2.textContent = testQuestions.q5.correct;
+        answer3.textContent = testQuestions.q5.incorrect2;
+        answer4.textContent = testQuestions.q5.incorrect3;
+    },
+}
 //When any answer is clicked move to the next question
-    //store question changes in an object with methods
     //create an onclick for .answer to change current question num
 
 //When the wrong answer is clicked remove time from timer
