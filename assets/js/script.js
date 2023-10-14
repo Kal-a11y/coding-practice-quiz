@@ -25,6 +25,7 @@ let answerContainter = document.querySelectorAll('.answer'); //all answers
 //global variables
 let secondsLeft = 60;
 let quizInProgress = true;
+let lostTime = false;
 let currentQuestionNum = 1;
 
 //Click start quiz button
