@@ -47,6 +47,13 @@ function startTimer() {
         if (secondsLeft === 0 && quizInProgress){
             clearInterval(timerInterval);
             quizFailed();
+        } else if (lostTime){
+            clearInterval(timerInterval);
+            secondsLeft -= 5;
+            timer.textContent = secondsLeft;
+            lostTime = false;
+            startTimer();
+            return
         }
     },1000)
 }
