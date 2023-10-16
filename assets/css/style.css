@@ -73,6 +73,14 @@ footer{
 
 /* Section timeout screen*/
 #time-out-view{
-   text-align: center;
-   margin-top: 50px;
+    display: none;
+    text-align: center;
+    margin-top: 50px;
 }
+
+/* Section passed screen*/
+#passed-view{
+    display: none;
+    text-align: center;
+    margin-top: 50px;
+ }
