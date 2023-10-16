@@ -164,7 +164,32 @@ let showQuestion = {
     },
 }
 
-//When the wrong answer is clicked remove time from timer
+//When timer runs out show timed out screen and return to main
+    //create a section in html for end screen
+    //if time runs, out section text is "You ran out of time". 
+        //click button on screen to return to main page
+//When all questions are answered show quiz complete screen and collect score
+    //create leaderboard screen
+        //Make a table
+    //create a variable anweredCorrectly
+        //when correct answer is clicked answeredCorrectly++
+    //create variable quizLength
+        //find a way to store the length of the quiz
+    //if currentQuestionNum > quizLength, section text is "You completed the quiz"
+    //Create object leaderboardScores
+        //create variable timeCompleted
+            //timeCompleted++ inside timerInvterval
+        //first(name,score/quizLength,timeCompleted,isCurrentScore)
+        //hit next button to store initials in a form
+            //initails can only be 2 characters long
+                //if input.value().length > 2 dont allow more characters
+            //save current score in object leaderboardScores as 6th place
+    //Create function to order scores
+    //show scores
+        //if current score did not make it to leader board text is "did not make leader board"
+        //else text is "congragulations you made [] place"
+    //click button to go to home
+
 
 //delete code below when done
 
