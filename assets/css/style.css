@@ -84,3 +84,8 @@ footer{
     text-align: center;
     margin-top: 50px;
  }
+
+ #passed-view form button{
+    display: block;
+    margin: 10px auto;
+ }
