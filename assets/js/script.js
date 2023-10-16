@@ -4,7 +4,8 @@ import {
 
 //Screens
 let homeScreen = document.querySelector('main');
-let gameScreen = document.querySelector('#game-view')
+let gameScreen = document.querySelector('#game-view');
+let timeOutScreen = document.querySelector('#time-out-view');
 
 //buttons
 let startBtn = document.querySelector('#start-btn');
@@ -193,9 +194,9 @@ let showQuestion = {
 
 //delete code below when done
 
-homeScreen.style.display = 'none';
-gameScreen.style.display = 'block';
+// homeScreen.style.display = 'none';
+// gameScreen.style.display = 'block';
 
-timer.textContent = secondsLeft;
-startTimer();
-quiz();
+// timer.textContent = secondsLeft;
+// startTimer();
+// quiz();
