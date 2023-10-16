@@ -97,6 +97,7 @@ let showQuestion = {
 
         //Show answer information
         answer1.textContent = testQuestions.q1.correct;
+            answer1.setAttribute('data-state','correct');
         answer2.textContent = testQuestions.q1.incorrect1;
         answer3.textContent = testQuestions.q1.incorrect2;
         answer4.textContent = testQuestions.q1.incorrect3;
@@ -110,6 +111,7 @@ let showQuestion = {
         answer1.textContent = testQuestions.q2.incorrect2;
         answer2.textContent = testQuestions.q2.incorrect1;
         answer3.textContent = testQuestions.q2.correct;
+            answer3.setAttribute('data-state','correct');
         answer4.textContent = testQuestions.q2.incorrect3;
     },
     q3: function(){
@@ -122,6 +124,7 @@ let showQuestion = {
         answer2.textContent = testQuestions.q3.incorrect1;
         answer3.textContent = testQuestions.q3.incorrect2;
         answer4.textContent = testQuestions.q3.correct;
+            answer4.setAttribute('data-state','correct');
     },
     q4: function(){
         //Show question information
@@ -130,6 +133,7 @@ let showQuestion = {
 
         //Show answer information
         answer1.textContent = testQuestions.q4.correct;
+            answer1.setAttribute('data-state','correct');
         answer2.textContent = testQuestions.q4.incorrect1;
         answer3.textContent = testQuestions.q4.incorrect2;
         answer4.textContent = testQuestions.q4.incorrect3;
@@ -142,6 +146,7 @@ let showQuestion = {
         //Show answer information
         answer1.textContent = testQuestions.q5.incorrect1;
         answer2.textContent = testQuestions.q5.correct;
+            answer2.setAttribute('data-state','correct');   
         answer3.textContent = testQuestions.q5.incorrect2;
         answer4.textContent = testQuestions.q5.incorrect3;
     },
