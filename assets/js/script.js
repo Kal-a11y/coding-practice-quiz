@@ -165,10 +165,18 @@ let showQuestion = {
     },
 }
 
-//When timer runs out show timed out screen and return to main
-    //create a section in html for end screen
-    //if time runs, out section text is "You ran out of time". 
-        //click button on screen to return to main page
+function quizTimeOut(){
+    gameScreen.style.display = 'none';
+    timeOutScreen.style.display = 'block';
+
+    let homeBtn = timeOutScreen.querySelector('.returnHome');
+    homeBtn.addEventListener('click',()=>{
+        timeOutScreen.style.display = 'none';
+        homeScreen.style.display = 'block'
+    })
+}
+
+
 //When all questions are answered show quiz complete screen and collect score
     //create leaderboard screen
         //Make a table
