@@ -64,9 +64,21 @@ function quiz(){
 
     //For each answer conainer...
         for (let i = 0;i < answerContainter.length; i++){
-            //When clicked change the question
+            //...When answer container is clicked...
             answerContainter[i].addEventListener('click', () =>{
+                //...Find the correct answer
+                let correctAnswer = document.querySelector('[data-state="correct"]');
+                console.log(correctAnswer)
                 
+                //...If correct answer is clicked and else
+                if (answerContainter[i].getAttribute('data-state') === 'correct'){
+                    answerContainter[i].removeAttribute('data-state');
+                }else{
+                    correctAnswer.removeAttribute('data-state');
+                    lostTime = true;
+                }
+
+                //...Change the answer shown
                 currentQuestionNum++;
                 if (currentQuestionNum == 1){
                     showQuestion.q1();
