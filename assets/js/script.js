@@ -6,6 +6,7 @@ import {
 let homeScreen = document.querySelector('main');
 let gameScreen = document.querySelector('#game-view');
 let timeOutScreen = document.querySelector('#time-out-view');
+let passedView = document.querySelector('#passed-view');
 
 //buttons
 let startBtn = document.querySelector('#start-btn');
