@@ -46,7 +46,7 @@ function startTimer() {
 
         if (secondsLeft === 0 && quizInProgress){
             clearInterval(timerInterval);
-            quizFailed();
+            quizTimeOut();
         } else if (lostTime){
             clearInterval(timerInterval);
             secondsLeft -= 5;
@@ -91,7 +91,7 @@ function quiz(){
                 } else if (currentQuestionNum == 5){
                     showQuestion.q5();
                 } else {
-                    quizPassed();
+                    quizCompleted();
                 }
             })
             
