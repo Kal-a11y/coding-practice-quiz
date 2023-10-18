@@ -70,7 +70,7 @@ function quiz(){
             answerContainter[i].addEventListener('click', () =>{
                 //...Find the correct answer
                 let correctAnswer = document.querySelector('[data-state="correct"]');
-                console.log(correctAnswer)
+                score++;
                 
                 //...If correct answer is clicked and else
                 if (answerContainter[i].getAttribute('data-state') === 'correct'){
