@@ -41,6 +41,34 @@ startBtn.addEventListener('click',() => {
     quiz();
 })
 
+function renderScore(currentName,currentScore){
+    let lastUser = JSON.parse(localStorage.getItem('lastUser'));
+
+    let playerScores = {
+
+    }
+    
+    scoreScreen.querySelector('#currentUserName').textContent = currentName;
+    scoreScreen.querySelector('#currentUserScore').textContent = currentScore;
+    
+    if (lastUser !== null){
+        scoreScreen.querySelector('#lastUserName').textContent = lastUser.name + ' got ';
+        scoreScreen.querySelector('#lastUserScore').textContent = lastUser.score + ' points';
+    }
+
+    scoreScreen.querySelector('.returnHome').addEventListener('click',()=>{
+       passedScreen.querySelector('input[type="text"]').value = ''
+       
+        playerScores.name = currentName;
+        playerScores.score = currentScore;
+
+        localStorage.setItem('lastUser',JSON.stringify(playerScores));
+        scoreScreen.style.display = 'none';
+        homeScreen.style.display = 'block';
+    })
+
+    
+}
 function startTimer() {
     let timerInterval = setInterval(() =>{
         secondsLeft--;
