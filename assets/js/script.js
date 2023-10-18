@@ -177,6 +177,14 @@ function quizTimeOut(){
     })
 }
 
+function quizCompleted(){
+    quizInProgress = false;
+    gameScreen.style.display = 'none';
+    passedScreen.style.display = 'block'
+    
+    passedScreen.querySelector('button').addEventListener('click',(event)=>{
+        event.preventDefault();
+        let name = passedScreen.querySelector('input[type="text"]').value;
 
 //When all questions are answered show quiz complete screen and collect score
     //create leaderboard screen
