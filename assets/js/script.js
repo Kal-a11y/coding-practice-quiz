@@ -4,7 +4,10 @@ import {
 
 //Screens
 let homeScreen = document.querySelector('main');
-let gameScreen = document.querySelector('#game-view')
+let gameScreen = document.querySelector('#game-view');
+let timeOutScreen = document.querySelector('#time-out-view');
+let passedScreen = document.querySelector('#passed-view');
+let scoreScreen = document.querySelector('#score-view')
 
 //buttons
 let startBtn = document.querySelector('#start-btn');
@@ -27,6 +30,7 @@ let secondsLeft = 60;
 let quizInProgress = true;
 let lostTime = false;
 let currentQuestionNum = 1;
+let score = 0;
 
 //Click start quiz button
 startBtn.addEventListener('click',() => {
@@ -39,14 +43,42 @@ startBtn.addEventListener('click',() => {
     quiz();
 })
 
+function renderScore(currentName,currentScore){
+    let lastUser = JSON.parse(localStorage.getItem('lastUser'));
+
+    let playerScores = {
+
+    }
+    
+    scoreScreen.querySelector('#currentUserName').textContent = currentName;
+    scoreScreen.querySelector('#currentUserScore').textContent = currentScore;
+    
+    if (lastUser !== null){
+        scoreScreen.querySelector('#lastUserName').textContent = lastUser.name + ' got ';
+        scoreScreen.querySelector('#lastUserScore').textContent = lastUser.score + ' points';
+    }
+
+    scoreScreen.querySelector('.returnHome').addEventListener('click',()=>{
+       passedScreen.querySelector('input[type="text"]').value = ''
+       
+        playerScores.name = currentName;
+        playerScores.score = currentScore;
+
+        localStorage.setItem('lastUser',JSON.stringify(playerScores));
+        scoreScreen.style.display = 'none';
+        homeScreen.style.display = 'block';
+    })
+
+    
+}
 function startTimer() {
     let timerInterval = setInterval(() =>{
         secondsLeft--;
         timer.textContent = secondsLeft;
 
-        if (secondsLeft === 0 && quizInProgress){
+        if (secondsLeft <= 0 && quizInProgress){
             clearInterval(timerInterval);
-            quizFailed();
+            quizTimeOut();
         } else if (lostTime){
             clearInterval(timerInterval);
             secondsLeft -= 5;
@@ -68,7 +100,7 @@ function quiz(){
             answerContainter[i].addEventListener('click', () =>{
                 //...Find the correct answer
                 let correctAnswer = document.querySelector('[data-state="correct"]');
-                console.log(correctAnswer)
+                score++;
                 
                 //...If correct answer is clicked and else
                 if (answerContainter[i].getAttribute('data-state') === 'correct'){
@@ -91,7 +123,7 @@ function quiz(){
                 } else if (currentQuestionNum == 5){
                     showQuestion.q5();
                 } else {
-                    quizPassed();
+                    quizCompleted();
                 }
             })
             
@@ -164,13 +196,34 @@ let showQuestion = {
     },
 }
 
-//When the wrong answer is clicked remove time from timer
+function quizTimeOut(){
+    gameScreen.style.display = 'none';
+    timeOutScreen.style.display = 'block';
 
-//delete code below when done
+    let homeBtn = timeOutScreen.querySelector('.returnHome');
+    homeBtn.addEventListener('click',()=>{
+        timeOutScreen.style.display = 'none';
+        homeScreen.style.display = 'block'
+    })
+}
 
-homeScreen.style.display = 'none';
-gameScreen.style.display = 'block';
+function quizCompleted(){
+    quizInProgress = false;
+    gameScreen.style.display = 'none';
+    passedScreen.style.display = 'block'
+    
+    passedScreen.querySelector('button').addEventListener('click',(event)=>{
+        event.preventDefault();
+        let name = passedScreen.querySelector('input[type="text"]').value;
+        
+        passedScreen.style.display = 'none';
+        scoreScreen.style.display = 'block';
+        
+        renderScore(name,score);
+        
+    })
+    
+}
 
-timer.textContent = secondsLeft;
-startTimer();
-quiz();
+
+

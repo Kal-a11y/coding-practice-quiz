@@ -57,6 +57,20 @@ button:hover{
 }
 
 /* Section highscores */
+#score-view{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+
+    display: none;
+    
+    
+}
+#score-view table *{
+   border: 1px solid black;
+   width: 200px;
+
+}
 
 /* Footer */
 footer{
@@ -70,3 +84,22 @@ footer{
     background-color: purple;
     color:white;
 }
+
+/* Section timeout screen*/
+#time-out-view{
+    display: none;
+    text-align: center;
+    margin-top: 50px;
+}
+
+/* Section passed screen*/
+#passed-view{
+    display: none;
+    text-align: center;
+    margin-top: 50px;
+ }
+
+ #passed-view form button{
+    display: block;
+    margin: 10px auto;
+ }
