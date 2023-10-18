@@ -186,34 +186,14 @@ function quizCompleted(){
         event.preventDefault();
         let name = passedScreen.querySelector('input[type="text"]').value;
 
-//When all questions are answered show quiz complete screen and collect score
-    //create leaderboard screen
-        //Make a table
-    //create a variable anweredCorrectly
-        //when correct answer is clicked answeredCorrectly++
-    //create variable quizLength
-        //find a way to store the length of the quiz
-    //if currentQuestionNum > quizLength, section text is "You completed the quiz"
-    //Create object leaderboardScores
-        //create variable timeCompleted
-            //timeCompleted++ inside timerInvterval
-        //first(name,score/quizLength,timeCompleted,isCurrentScore)
-        //hit next button to store initials in a form
-            //initails can only be 2 characters long
-                //if input.value().length > 2 dont allow more characters
-            //save current score in object leaderboardScores as 6th place
-    //Create function to order scores
-    //show scores
-        //if current score did not make it to leader board text is "did not make leader board"
-        //else text is "congragulations you made [] place"
-    //click button to go to home
+        passedScreen.style.display = 'none';
+        scoreScreen.style.display = 'block';
+        
+        renderScore(name,score);
+        
+    })
+    
+}
 
 
-//delete code below when done
 
-// homeScreen.style.display = 'none';
-// gameScreen.style.display = 'block';
-
-// timer.textContent = secondsLeft;
-// startTimer();
-// quiz();
