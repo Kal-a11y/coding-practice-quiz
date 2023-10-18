@@ -185,7 +185,7 @@ function quizCompleted(){
     passedScreen.querySelector('button').addEventListener('click',(event)=>{
         event.preventDefault();
         let name = passedScreen.querySelector('input[type="text"]').value;
-
+        
         passedScreen.style.display = 'none';
         scoreScreen.style.display = 'block';
         
