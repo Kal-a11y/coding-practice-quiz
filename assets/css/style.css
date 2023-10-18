@@ -57,6 +57,20 @@ button:hover{
 }
 
 /* Section highscores */
+#score-view{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+
+    display: none;
+    
+    
+}
+#score-view table *{
+   border: 1px solid black;
+   width: 200px;
+
+}
 
 /* Footer */
 footer{
