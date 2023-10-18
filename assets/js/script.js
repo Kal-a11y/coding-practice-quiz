@@ -29,6 +29,7 @@ let secondsLeft = 60;
 let quizInProgress = true;
 let lostTime = false;
 let currentQuestionNum = 1;
+let score = 0;
 
 //Click start quiz button
 startBtn.addEventListener('click',() => {
