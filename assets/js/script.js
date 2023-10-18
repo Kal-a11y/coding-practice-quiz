@@ -7,6 +7,7 @@ let homeScreen = document.querySelector('main');
 let gameScreen = document.querySelector('#game-view');
 let timeOutScreen = document.querySelector('#time-out-view');
 let passedScreen = document.querySelector('#passed-view');
+let scoreScreen = document.querySelector('#score-view')
 
 //buttons
 let startBtn = document.querySelector('#start-btn');
