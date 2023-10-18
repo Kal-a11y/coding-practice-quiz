@@ -46,7 +46,7 @@ function startTimer() {
         secondsLeft--;
         timer.textContent = secondsLeft;
 
-        if (secondsLeft === 0 && quizInProgress){
+        if (secondsLeft <= 0 && quizInProgress){
             clearInterval(timerInterval);
             quizTimeOut();
         } else if (lostTime){
